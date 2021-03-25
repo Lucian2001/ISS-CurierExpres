@@ -2,8 +2,8 @@
 
 Firma de curierat
 
-  O firma si-a creat o infrastructura prin care seful gestioneaza curierii prezenti la lucru si le traseaza
-comenzi individuale. Firma are o aplicatie care ofera:
+  O firma si-a creat o infrastructura prin care seful gestioneaza curierii prezenti la lucru si traseaza
+comenzi. Firma are multe pachete de livrat si le livreaza pe parcursul a mai multe zile. Firma are o aplicatie care ofera:
   1)o fereastra pentru sef, cu ajutorul careia seful vede lista pachetelor în firma, seful in fiecare zi 
 stabileste ce pachete trebuie livrate de catre angajatii sai in ziua curenta.
   Seful poate sa vada statusul fiecarui angajat:
