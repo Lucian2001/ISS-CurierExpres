@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="442.0" prefWidth="628.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <ListView layoutX="66.0" layoutY="83.0" prefHeight="285.0" prefWidth="200.0" />
+      <ListView layoutX="344.0" layoutY="83.0" prefHeight="285.0" prefWidth="200.0" />
+      <Label layoutX="106.0" layoutY="56.0" text="Toate coletele de livrat" />
+      <Label layoutX="345.0" layoutY="56.0" text="Colete selectate pentru livrarea de azi" />
+      <Button layoutX="408.0" layoutY="376.0" mnemonicParsing="false" text="Terminare selectare colete" />
+      <Button layoutX="183.0" layoutY="376.0" mnemonicParsing="false" text="Detalii Pachet" />
+      <Button layoutX="66.0" layoutY="376.0" mnemonicParsing="false" text="Adauga pachet" />
+      <Button layoutX="453.0" layoutY="14.0" mnemonicParsing="false" text="Vizualizeaza status angajati" />
+   </children>
+</AnchorPane>
