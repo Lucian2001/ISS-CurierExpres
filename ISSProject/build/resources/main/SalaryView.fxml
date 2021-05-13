@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="319.0" prefWidth="403.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SalaryView">
+   <children>
+      <ButtonBar prefHeight="40.0" prefWidth="200.0" />
+      <TextField layoutX="142.0" layoutY="118.0" />
+    <Button layoutX="196.0" layoutY="244.0" mnemonicParsing="false" text="Save" />
+      <TextField layoutX="142.0" layoutY="157.0" />
+      <TextField layoutX="142.0" layoutY="194.0" />
+      <Label layoutX="151.0" layoutY="87.0" text="Angajat" />
+      <Label layoutX="60.0" layoutY="122.0" text="Salariu de baza" />
+      <Label layoutX="100.0" layoutY="161.0" text="Bonus" />
+      <Label layoutX="82.0" layoutY="198.0" text="Penalizare" />
+   </children>
+</AnchorPane>

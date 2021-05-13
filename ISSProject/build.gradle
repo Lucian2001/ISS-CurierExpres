@@ -16,8 +16,13 @@ javafx {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.19'
 
     compile 'org.springframework:spring-context:5.1.5.RELEASE'
+
+    compile 'org.hibernate:hibernate-core:5.2.10.Final'
+    implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
 }
 
 mainClassName='MainFXSpring'

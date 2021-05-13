@@ -1,4 +1,4 @@
 package controllers;
 
-public class EmployeeDeliveryController {
+public class EmployeeDeliveryController implements Controller{
 }

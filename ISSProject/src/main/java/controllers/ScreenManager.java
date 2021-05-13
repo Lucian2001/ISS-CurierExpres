@@ -1,7 +1,12 @@
+package controllers;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 
 import java.io.IOException;
 import java.net.URL;
@@ -10,7 +15,7 @@ import java.util.HashMap;
 public class ScreenManager {
     private HashMap<String, URL> screenMap = new HashMap<>();
     private Scene main = null;
-    private static ScreenController instance = new ScreenController();
+    private static ScreenManager instance = new ScreenManager();
     private FXMLLoader loader;
     private ApplicationContext context = null;
 
@@ -23,7 +28,7 @@ public class ScreenManager {
     }
 
     private Stage mainStage = null;
-    private ScreenController() {
+    private ScreenManager() {
 
     }
 
@@ -70,7 +75,7 @@ public class ScreenManager {
     }
 
 
-    public static ScreenController get_instance(){
+    public static ScreenManager get_instance(){
         return instance;
     }
 }
