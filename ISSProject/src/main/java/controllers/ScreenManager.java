@@ -1,9 +1,12 @@
 package controllers;
 
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -78,4 +81,18 @@ public class ScreenManager {
     public static ScreenManager get_instance(){
         return instance;
     }
+
+    public Controller openNewScene(String name, Class<?> controllerClass) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader();
+        fxmlLoader.setLocation(screenMap.get(name));
+        fxmlLoader.setController(getContext().getBean(controllerClass));
+        Parent root1 = (Parent) fxmlLoader.load();
+        Stage stage = new Stage();
+
+        stage.setTitle("PackageDescription");
+        stage.setScene(new Scene(root1));
+        stage.show();
+        return fxmlLoader.getController();
+    }
+
 }

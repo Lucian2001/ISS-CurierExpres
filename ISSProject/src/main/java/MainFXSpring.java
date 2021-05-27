@@ -21,6 +21,9 @@ public class MainFXSpring extends Application {
             ScreenManager.get_instance().addScreen("employeeWelcomePageScreen", getClass().getResource("EmployeeWelcomePage.fxml"));
             ScreenManager.get_instance().addScreen("employeeMainScreen", getClass().getResource("EmployeeMainView.fxml"));
             ScreenManager.get_instance().addScreen("employeeDeliveryScreen", getClass().getResource("EmployeeDeliveryView.fxml"));
+            ScreenManager.get_instance().addScreen("packageDetailsScreen", getClass().getResource("PackageDetailsView.fxml"));
+            ScreenManager.get_instance().addScreen("employeeStatsScreen", getClass().getResource("EmployeeStatsView.fxml"));
+
 
             ScreenManager.get_instance().activate("loginScreen", LoginController.class);
             ScreenManager.get_instance().setMainStage(primaryStage);

@@ -6,8 +6,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
+import models.Curier;
 import models.Pachet;
 import models.Sef;
+
+import java.io.IOException;
 
 public class BossMainController implements Controller{
     Sef user;
@@ -71,6 +74,20 @@ public class BossMainController implements Controller{
             alert.setContentText("Selecteaza cel putin un pachet!");
             alert.show();
         }
+    }
+
+
+    @FXML
+    void handlePackageDetails(){
+        Pachet pachet = availablePackagesListView.getSelectionModel().getSelectedItem();
+        try {
+            PackageDetailsController controller = (PackageDetailsController) ScreenManager.get_instance().openNewScene("packageDetailsScreen", PackageDetailsController.class);
+            controller.showPackageDetails(pachet);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
 

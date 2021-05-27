@@ -55,6 +55,50 @@ public class RepoPackage {
         return pachete;
     }
 
+    public List<Pachet> getPackagesForCurier(Curier curier){
+        List<Pachet> pachete = null;
+        try(Session session = sessionFactory.openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                pachete =
+                        session.createQuery("from models.Pachet where id in " +
+                                "(select pachet.id from models.ZiDeLivrare as z WHERE z.curier.id = :curier_id)", Pachet.class)
+                                .setParameter("curier_id", curier.getId())
+                                .list();
+                tx.commit();
+            } catch (RuntimeException ex) {
+                System.out.println(ex.getMessage());
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return pachete;
+    }
+
+    public List<Pachet> getAllPackagesDeliveredByCurier(Curier curier){
+        List<Pachet> pachete = null;
+        try(Session session = sessionFactory.openSession()) {
+            Transaction tx = null;
+            try {
+                tx = session.beginTransaction();
+                pachete =
+                        session.createQuery("from models.Pachet where statusPachet = 'livrat' and id in " +
+                                "(select pachet.id from models.ZiDeLivrare as z WHERE z.curier.id = :curier_id)", Pachet.class)
+                                .setParameter("curier_id", curier.getId())
+                                .list();
+                tx.commit();
+            } catch (RuntimeException ex) {
+                System.out.println(ex.getMessage());
+                if (tx != null)
+                    tx.rollback();
+            }
+        }
+        return pachete;
+    }
+
+
+
     public Pachet modifyStatus(Pachet pachet, StatusPachet newStatusPachet){
         try(Session session = sessionFactory.openSession()){
             Transaction tx = null;

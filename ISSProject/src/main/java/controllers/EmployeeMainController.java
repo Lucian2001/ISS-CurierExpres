@@ -10,6 +10,8 @@ import models.Curier;
 import models.Pachet;
 import models.Sef;
 
+import java.io.IOException;
+
 public class EmployeeMainController implements Controller{
     Curier user;
     Service service;
@@ -58,21 +60,24 @@ public class EmployeeMainController implements Controller{
 
     @FXML
     void endSelectPackages(){
-        if(selectedPackagesListView.getItems().size() > 0){
+       // if(selectedPackagesListView.getItems().size() > 0){
             isSelecting = false;
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Info");
-            alert.setHeaderText("Info");
-            alert.setContentText("Ai terminat selectarea pachetelor!");
-            alert.show();
 
-        } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setTitle("Warning Dialog");
-            alert.setHeaderText("Eroare");
-            alert.setContentText("Selecteaza cel putin un pachet!");
-            alert.show();
-        }
+            try {
+                ScreenManager.get_instance().activate("employeeDeliveryScreen", EmployeeDeliveryController.class);
+                ((EmployeeDeliveryController)ScreenManager.get_instance().getCurrentController()).setUser(user);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
+//        } else {
+//            Alert alert = new Alert(Alert.AlertType.WARNING);
+//            alert.setTitle("Warning Dialog");
+//            alert.setHeaderText("Eroare");
+//            alert.setContentText("Selecteaza cel putin un pachet!");
+//            alert.show();
+//        }
     }
 
 }

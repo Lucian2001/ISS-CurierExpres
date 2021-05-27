@@ -10,7 +10,7 @@
       <Label layoutX="106.0" layoutY="56.0" text="Toate coletele de livrat" />
       <Label layoutX="345.0" layoutY="56.0" text="Colete selectate pentru livrarea de azi" />
       <Button layoutX="408.0" layoutY="376.0" mnemonicParsing="false" onAction="#endSelectPackages" text="Terminare selectare colete" />
-      <Button layoutX="183.0" layoutY="376.0" mnemonicParsing="false" text="Detalii Pachet" />
+      <Button layoutX="183.0" layoutY="376.0" mnemonicParsing="false" onAction="#handlePackageDetails" text="Detalii Pachet" />
       <Button layoutX="66.0" layoutY="376.0" mnemonicParsing="false" onAction="#addPackage" text="Adauga pachet" />
       <Button layoutX="453.0" layoutY="14.0" mnemonicParsing="false" text="Vizualizeaza status angajati" />
    </children>

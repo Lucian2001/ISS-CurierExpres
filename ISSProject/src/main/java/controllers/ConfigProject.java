@@ -79,8 +79,23 @@ public class ConfigProject {
     }
 
     @Bean
+    EmployeeDeliveryController employeeDeliveryController() throws Exception{
+        return new  EmployeeDeliveryController(service());
+    }
+
+    @Bean
     EmployeeMainController employeeMainController() throws Exception{
         return new EmployeeMainController(service());
+    }
+
+    @Bean
+    PackageDetailsController packageDetailsController() throws Exception{
+        return new PackageDetailsController();
+    }
+
+    @Bean
+    EmployeeStatsController employeeStatsController() throws Exception{
+        return new EmployeeStatsController (service());
     }
 
 }

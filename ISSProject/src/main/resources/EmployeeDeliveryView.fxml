@@ -3,12 +3,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="400.0" prefWidth="309.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ListView layoutX="43.0" layoutY="56.0" prefHeight="270.0" prefWidth="200.0" />
+      <ListView fx:id="packagesListView" layoutX="43.0" layoutY="56.0" prefHeight="270.0" prefWidth="200.0" />
       <Label layoutX="44.0" layoutY="30.0" text="Pachete de livrat" />
-      <Button layoutX="83.0" layoutY="346.0" mnemonicParsing="false" text="Livreaza pachet" />
-      <Button layoutX="193.0" layoutY="18.0" mnemonicParsing="false" text="Vizualizare statistici" />
+      <Button layoutX="83.0" layoutY="346.0" mnemonicParsing="false" onAction="#handleDeliveryPackage" text="Livreaza pachet" />
+      <Button layoutX="193.0" layoutY="18.0" mnemonicParsing="false" onAction="#handleShowStats" text="Vizualizare statistici" />
    </children>
 </AnchorPane>

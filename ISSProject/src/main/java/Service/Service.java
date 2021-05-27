@@ -55,4 +55,16 @@ public class Service {
         repoPackage.modifyStatus(pachet, StatusPachet.livrareAziIndisponibil);
     }
 
+    public List<Pachet> getPackagesForDelivery(Curier curier){
+        return repoPackage.getPackagesForCurier(curier);
+    }
+
+    public void deliverPackage(Curier curier, Pachet pachet){
+        repoPackage.modifyStatus(pachet, StatusPachet.livrat);
+    }
+
+    public List<Pachet> getDeliveredPackages(Curier curier){
+        return repoPackage.getAllPackagesDeliveredByCurier(curier);
+    }
+
 }
